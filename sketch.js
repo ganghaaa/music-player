@@ -11,7 +11,7 @@ function setup(){
 
 function togglePlaying(){
     if (!song.isPlaying()){
-        song.plau();
+        song.play();
         song.setVolume(0.3);
         button.html('pause');
     } else {
