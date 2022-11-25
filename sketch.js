@@ -12,7 +12,6 @@ function setup(){
 function togglePlaying(){
     if (!song.isPlaying()){
         song.play();
-        
         button.html('pause');
     } else {
         song.stop();
@@ -21,5 +20,5 @@ function togglePlaying(){
 }
 
 function loaded(){
-    console.log(loaded);
+    console.log('loaded');
 }
