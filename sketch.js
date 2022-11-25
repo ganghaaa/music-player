@@ -1,10 +1,25 @@
-let mySound;
+var song;
+var button;
+
 function setup(){
-    soundFormats('mp3');
-    mySound = loadSound('ANL', loadmusic);
-    //mySound.play();
+    createCanvas(200,200);
+    song = loadSound('ANL.mp3', loaded);
+    button = createButton('play');
+    button.mousePressed(togglePlaying);
+    background(51);
 }
 
-function loadmusic(){
-    mySound.play();
+function togglePlaying(){
+    if (!song.isPlaying()){
+        song.plau();
+        song.setVolume(0.3);
+        button.html('pause');
+    } else {
+        song.stop();
+        button.html('play');
+    }
+}
+
+function loaded(){
+    console.log(loaded);
 }
